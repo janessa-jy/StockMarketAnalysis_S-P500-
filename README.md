@@ -55,6 +55,7 @@ The beta coefficient can be interpreted as follows:
 
 
 
+
 <code style="color : name_color">β =1 exactly as volatile as the market</code>
 
 <code style="color : name_color">β >1 more volatile than the market</code>
@@ -65,6 +66,7 @@ The beta coefficient can be interpreted as follows:
 <code style="color : name_color">β =0 uncorrelated to the market </code>
 
 <code style="color : name_colr">β <0 negatively correlated to the market </code>
+
 
 
 
