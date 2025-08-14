@@ -38,6 +38,7 @@ intercept the internal API call, transform the data, and create a dynamic functi
 
 
 
+
 - Ticker : A ticker is a symbol, a unique combination of letters and numbers that represent a particular stock or security listed on an exchange
  Index	
 - MarketCap :The Market Cap is equal to the current share price multiplied by the number of shares outstanding.  Market capitalization or market cap refers to the total market value of a company's outstanding shares of stock
