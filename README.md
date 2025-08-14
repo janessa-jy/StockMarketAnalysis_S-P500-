@@ -94,6 +94,6 @@ The beta coefficient can be interpreted as follows:
 
 - SecurityName: A security is a financial instrument, typically any financial asset that can be traded. 	
 
-- Trailing PEG ratio:	
+- Trailing PEG ratio (P/E-to-growth):	In the trailing PEG method, a company's earnings growth rate is calculated using its historical EPS growth rates. This metric looks at a company's share price relative to its earnings per share (EPS) and projected earnings growth rate. 
 	
 
