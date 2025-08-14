@@ -94,6 +94,73 @@ The beta coefficient can be interpreted as follows:
 
 - SecurityName: A security is a financial instrument, typically any financial asset that can be traded. 	
 
-- Trailing PEG ratio (P/E-to-growth):	In the trailing PEG method, a company's earnings growth rate is calculated using its historical EPS growth rates. This metric looks at a company's share price relative to its earnings per share (EPS) and projected earnings growth rate. 
-	
+- Trailing PEG ratio (P/E-to-growth):	In the trailing PEG method, a company's earnings growth rate is calculated using its historical EPS growth rates. This metric looks at a company's share price relative to its earnings per share (EPS) and projected earnings growth rate.
 
+
+
+
+_______________________________________________________--
+ Period = 
+VAR
+    _last30days = ADDCOLUMNS(
+        CALCULATETABLE(
+            'Calendar'
+            ,DATESBETWEEN( 'Calendar'[Date], TODAY() - 30, TODAY() )
+        )
+        , "In the last", "30 days"
+    )
+VAR
+    _last60days = ADDCOLUMNS(
+        CALCULATETABLE(
+            'Calendar'
+            ,DATESBETWEEN( 'Calendar'[Date], TODAY() - 60, TODAY() )
+        )
+        , "In the last", "60 days"
+    )
+VAR
+    _last90days = ADDCOLUMNS(
+        CALCULATETABLE(
+            'Calendar'
+            ,DATESBETWEEN( 'Calendar'[Date], TODAY() - 90, TODAY() )
+        )
+        , "In the last", "90 days"
+    )
+VAR
+    _last365days = ADDCOLUMNS(
+        CALCULATETABLE(
+            'Calendar'
+            ,DATESBETWEEN( 'Calendar'[Date], TODAY() - 365, TODAY() )
+        )
+        , "In the last", "1 Year"
+    )
+
+RETURN
+    UNION( _last30days, _last60days, _last90days, _last365days)
+
+
+ _______________________________________________________________
+
+ Previous Day Price = 
+VAR CurrentDate = MAX('S&P500 Historical Prices'[Date])
+RETURN
+    CALCULATE(
+        MAX('S&P500 Historical Prices'[Close Price]),
+        FILTER(
+            ALL('S&P500 Historical Prices'),
+            'S&P500 Historical Prices'[Tickers] = SELECTEDVALUE('S&P500 Historical Prices'[Tickers]) &&
+            'S&P500 Historical Prices'[Date] = CurrentDate - 1
+        )
+    )
+
+
+ _____________________________________________________________________--
+Price Change % = 
+VAR PrevPrice = [Previous Day Price]
+VAR CurrPrice = MAX('S&P500 Historical Prices'[Close Price])
+RETURN
+    DIVIDE(CurrPrice - PrevPrice, PrevPrice)
+
+
+ ---------------------------------------------------------------------
+
+ SMA(200 Day) = AVERAGEX(DATESBETWEEN('S&P500 Historical Prices'[Date] , MAX('S&P500 Historical Prices'[Date]) -199 , MAX('S&P500 Historical Prices'[Date])),CALCULATE(SUM('S&P500 Historical Prices'[Close Price])))
