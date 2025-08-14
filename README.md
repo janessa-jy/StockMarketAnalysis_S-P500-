@@ -35,7 +35,7 @@ intercept the internal API call, transform the data, and create a dynamic functi
 
 
 ### Financial Info 
-<img width="150" height="150" alt="image" src="https://github.com/user-attachments/assets/37215658-1bed-4ca1-854f-2f229970f876" />
+<img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/37215658-1bed-4ca1-854f-2f229970f876" />
 
 
 
