@@ -18,7 +18,8 @@ intercept the internal API call, transform the data, and create a dynamic functi
 
 ## Dataset
 
-### Pricing Data <img width="60" height="60" alt="image" src="https://github.com/user-attachments/assets/7b7b3ea0-9e38-4085-8112-c6e132b853f5" />
+### Pricing Data <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/d286db5a-49cf-4c02-8c59-963c421bf5fb" />
+
 
 -	Close Price :  Closing price is the price at which the last trade with a security was made at the end of the trading day
 -	Volume : The number of shares traded during a specific period.
@@ -34,7 +35,8 @@ intercept the internal API call, transform the data, and create a dynamic functi
 
 
 ### Financial Info 
-<img width="55" height="55" alt="image" src="https://github.com/user-attachments/assets/fa4c2e30-9ab2-4350-8980-14131d39cd0c" />
+<img width="150" height="150" alt="image" src="https://github.com/user-attachments/assets/37215658-1bed-4ca1-854f-2f229970f876" />
+
 
 
 
