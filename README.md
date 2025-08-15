@@ -105,7 +105,9 @@ The beta coefficient can be interpreted as follows:
 
 
 DAX Forumlas 🚀🧠
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
 Period = VAR _last30days = ADDCOLUMNS( CALCULATETABLE( 'Calendar' ,DATESBETWEEN( 'Calendar'[Date], TODAY() - 30, TODAY() ) ) , "In the last", "30 days" )
 
 VAR _last60days = ADDCOLUMNS( CALCULATETABLE( 'Calendar' ,DATESBETWEEN( 'Calendar'[Date], TODAY() - 60, TODAY() ) ) , "In the last", "60 days" )
@@ -117,11 +119,16 @@ VAR _last365days = ADDCOLUMNS( CALCULATETABLE( 'Calendar' ,DATESBETWEEN( 'Calend
 RETURN UNION( _last30days, _last60days, _last90days, _last365days)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Previous Day Price = VAR CurrentDate = MAX('S&P500 Historical Prices'[Date]) RETURN CALCULATE( MAX('S&P500 Historical Prices'[Close Price]), FILTER( ALL('S&P500 Historical Prices'), 'S&P500 Historical Prices'[Tickers] = SELECTEDVALUE('S&P500 Historical Prices'[Tickers]) && 'S&P500 Historical Prices'[Date] = CurrentDate - 1 ) )
+Previous Day Price = 
+
+VAR CurrentDate = MAX('S&P500 Historical Prices'[Date]) \
+
+RETURN CALCULATE( MAX('S&P500 Historical Prices'[Close Price]), FILTER( ALL('S&P500 Historical Prices'), 'S&P500 Historical Prices'[Tickers] = SELECTEDVALUE('S&P500 Historical Prices'[Tickers]) && 'S&P500 Historical Prices'[Date] = CurrentDate - 1 ) )
 
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-Price Change % = VAR PrevPrice = [Previous Day Price] VAR CurrPrice = MAX('S&P500 Historical Prices'[Close Price])
+Price Change % = 
+VAR PrevPrice = [Previous Day Price] VAR CurrPrice = MAX('S&P500 Historical Prices'[Close Price])
 
 RETURN DIVIDE(CurrPrice - PrevPrice, PrevPrice)
 
