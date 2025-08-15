@@ -111,17 +111,20 @@ VAR
         CALCULATETABLE( <br />
             'Calendar' <br />
             ,DATESBETWEEN( 'Calendar'[Date], TODAY() - 30, TODAY() ) <br />
-        )<br />
+        ) <br />
         , "In the last", "30 days" <br />
-    )
+    ) <br />
+	
 VAR
-    _last60days = ADDCOLUMNS(
-        CALCULATETABLE(
-            'Calendar'
-            ,DATESBETWEEN( 'Calendar'[Date], TODAY() - 60, TODAY() )
-        )
-        , "In the last", "60 days"
-    )
+    _last60days = ADDCOLUMNS(  <br />
+        CALCULATETABLE( <br />
+            'Calendar'  <br />
+            ,DATESBETWEEN( 'Calendar'[Date], TODAY() - 60, TODAY() ) <br />
+        )  <br />
+        , "In the last", "60 days"  <br />
+    ) <br />
+
+ 
 VAR
     _last90days = ADDCOLUMNS(
         CALCULATETABLE(
@@ -131,16 +134,16 @@ VAR
         , "In the last", "90 days"
     )
 VAR
-    _last365days = ADDCOLUMNS(
-        CALCULATETABLE(
-            'Calendar'
-            ,DATESBETWEEN( 'Calendar'[Date], TODAY() - 365, TODAY() )
-        )
-        , "In the last", "1 Year"
-    )
+    _last365days = ADDCOLUMNS( <br />
+        CALCULATETABLE(        <br />
+            'Calendar'         <br />
+            ,DATESBETWEEN( 'Calendar'[Date], TODAY() - 365, TODAY() )  <br />
+        ) <br />
+        , "In the last", "1 Year" <br />
+    ) <br />
 
-RETURN
-    UNION( _last30days, _last60days, _last90days, _last365days)
+RETURN  <br />
+    UNION( _last30days, _last60days, _last90days, _last365days) <br />
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 
