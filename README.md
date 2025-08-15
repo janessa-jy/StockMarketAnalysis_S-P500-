@@ -107,12 +107,12 @@ DAX Forumlas 🚀🧠
 -------------------------------------------------------------------------------------------------------------------------------------
  Period = 
 VAR
-    _last30days = ADDCOLUMNS(
-        CALCULATETABLE(
-            'Calendar'
-            ,DATESBETWEEN( 'Calendar'[Date], TODAY() - 30, TODAY() )
-        )
-        , "In the last", "30 days"
+    _last30days = ADDCOLUMNS( <br />
+        CALCULATETABLE( <br />
+            'Calendar' <br />
+            ,DATESBETWEEN( 'Calendar'[Date], TODAY() - 30, TODAY() ) <br />
+        )<br />
+        , "In the last", "30 days" <br />
     )
 VAR
     _last60days = ADDCOLUMNS(
