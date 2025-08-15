@@ -56,7 +56,7 @@ intercept the internal API call, transform the data, and create a dynamic functi
 The beta coefficient can be interpreted as follows:
 
 
-
+ <br>
 
 <code style="color : name_color">β =1 exactly as volatile as the market</code>
 
@@ -70,7 +70,8 @@ The beta coefficient can be interpreted as follows:
 <code style="color : name_colr">β <0 negatively correlated to the market </code>
 
 
-
+ <br>
+ <br>
 
 
 
@@ -101,10 +102,10 @@ The beta coefficient can be interpreted as follows:
 
 
 
+ <br>
 
 
-
-DAX Forumlas 🚀🧠
+## DAX Forumlas 🚀🧠
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
