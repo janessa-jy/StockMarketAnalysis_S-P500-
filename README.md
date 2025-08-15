@@ -21,6 +21,8 @@ intercept the internal API call, transform the data, and create a dynamic functi
 ### Pricing Data <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/d286db5a-49cf-4c02-8c59-963c421bf5fb" />
 
 
+- Tickers.csv : A base file containing a list of ticker symbols used as input for data extraction.
+
 -	Close Price :  Closing price is the price at which the last trade with a security was made at the end of the trading day
 -	Volume : The number of shares traded during a specific period.
 
