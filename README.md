@@ -99,7 +99,10 @@ The beta coefficient can be interpreted as follows:
 
 
 
-_______________________________________________________--
+DAX Forumlas 🚀🧠
+
+
+-------------------------------------------------------------------------------------------------------------------------------------
  Period = 
 VAR
     _last30days = ADDCOLUMNS(
@@ -137,8 +140,8 @@ VAR
 RETURN
     UNION( _last30days, _last60days, _last90days, _last365days)
 
+------------------------------------------------------------------------------------------------------------------------------------------------------
 
- _______________________________________________________________
 
  Previous Day Price = 
 VAR CurrentDate = MAX('S&P500 Historical Prices'[Date])
@@ -153,7 +156,7 @@ RETURN
     )
 
 
- _____________________________________________________________________--
+-------------------------------------------------------------------------------------------------------------------------------------------------------
 Price Change % = 
 VAR PrevPrice = [Previous Day Price]
 VAR CurrPrice = MAX('S&P500 Historical Prices'[Close Price])
@@ -161,6 +164,6 @@ RETURN
     DIVIDE(CurrPrice - PrevPrice, PrevPrice)
 
 
- ---------------------------------------------------------------------
+ -------------------------------------------------------------------------------------------------------------------------------------------------------
 
  SMA(200 Day) = AVERAGEX(DATESBETWEEN('S&P500 Historical Prices'[Date] , MAX('S&P500 Historical Prices'[Date]) -199 , MAX('S&P500 Historical Prices'[Date])),CALCULATE(SUM('S&P500 Historical Prices'[Close Price])))
