@@ -130,7 +130,9 @@ RETURN CALCULATE( MAX('S&P500 Historical Prices'[Close Price]), FILTER( ALL('S&P
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 Price Change % = 
-VAR PrevPrice = [Previous Day Price] VAR CurrPrice = MAX('S&P500 Historical Prices'[Close Price])
+VAR PrevPrice = [Previous Day Price] 
+
+VAR CurrPrice = MAX('S&P500 Historical Prices'[Close Price])
 
 RETURN DIVIDE(CurrPrice - PrevPrice, PrevPrice)
 
