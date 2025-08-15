@@ -118,7 +118,7 @@ VAR _last90days = ADDCOLUMNS( CALCULATETABLE( 'Calendar' ,DATESBETWEEN( 'Calenda
 
 VAR _last365days = ADDCOLUMNS( CALCULATETABLE( 'Calendar' ,DATESBETWEEN( 'Calendar'[Date], TODAY() - 365, TODAY() ) ) , "In the last", "1 Year" )
 
-RETURN 
+RETURN  <br>
 UNION( _last30days, _last60days, _last90days, _last365days)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -126,7 +126,7 @@ Previous Day Price =
 
 VAR CurrentDate = MAX('S&P500 Historical Prices'[Date]) 
 
-RETURN 
+RETURN  <br>
 CALCULATE( MAX('S&P500 Historical Prices'[Close Price]), FILTER( ALL('S&P500 Historical Prices'), 'S&P500 Historical Prices'[Tickers] = SELECTEDVALUE('S&P500 Historical Prices'[Tickers]) && 'S&P500 Historical Prices'[Date] = CurrentDate - 1 ) )
 
 
@@ -136,7 +136,7 @@ VAR PrevPrice = [Previous Day Price]
 
 VAR CurrPrice = MAX('S&P500 Historical Prices'[Close Price])
 
-RETURN 
+RETURN  <br>
 DIVIDE(CurrPrice - PrevPrice, PrevPrice)
 
 
