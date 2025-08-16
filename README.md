@@ -143,7 +143,7 @@ SMA(200 Day) = AVERAGEX(DATESBETWEEN('S&P500 Historical Prices'[Date] , MAX('S&P
  <br>
 
 
-## Dashboard <img width="50" height="50" alt="image" target="_blank" />
+## Dashboard <img width="50" height="50" alt="image" />
 
 
  <br>
