@@ -7,12 +7,6 @@ The query intercept the internal API call, transform the data, and create a dyna
 
 
 
-Tickers.csv
-A base file containing a list of ticker symbols used as input for data extraction.
-	
-
-## 
-intercept the internal API call, transform the data, and create a dynamic function to fetch data for multiple stocks.
 
 
 
@@ -149,7 +143,7 @@ SMA(200 Day) = AVERAGEX(DATESBETWEEN('S&P500 Historical Prices'[Date] , MAX('S&P
  <br>
 
 
-## Dashboard <img width="50" height="50" alt="image" src="https://github.com/user-attachments/assets/69033826-3ba7-4ef9-b00b-630566d90f46" />
+## Dashboard <img width="50" height="50" alt="image" />
 
 
  <br>
