@@ -144,3 +144,18 @@ DIVIDE(CurrPrice - PrevPrice, PrevPrice)
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 SMA(200 Day) = AVERAGEX(DATESBETWEEN('S&P500 Historical Prices'[Date] , MAX('S&P500 Historical Prices'[Date]) -199 , MAX('S&P500 Historical Prices'[Date])),CALCULATE(SUM('S&P500 Historical Prices'[Close Price])))
 
+
+
+
+
+## Dashboard
+
+
+
+
+https://github.com/user-attachments/assets/227001e3-fe89-47a8-ba0e-bc3f522cf3b2
+
+
+
+
+
